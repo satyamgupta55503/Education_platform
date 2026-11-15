@@ -1,0 +1,21 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "gunicorn app.main:app --worker-class uvicorn.workers.UvicornWorker --workers 4 --bind 0.0.0.0:$PORT --timeout 120"
+healthcheckPath = "/health"
+healthcheckTimeout = 30
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
+
+[[services]]
+name = "api"
+
+[[services]]
+name = "worker"
+startCommand = "celery -A app.tasks.celery_app.celery_app worker --loglevel=info --concurrency=4"
+
+[[services]]
+name = "beat"
+startCommand = "celery -A app.tasks.celery_app.celery_app beat --loglevel=info"

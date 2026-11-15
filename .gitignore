@@ -1,0 +1,199 @@
+# ============================================================
+# Vidyayantra OS — Monorepo .gitignore
+# Covers: Next.js, Python/FastAPI, Flutter, Node.js
+# ============================================================
+
+# ============================================================
+# SECRETS & CREDENTIALS — NEVER COMMIT
+# ============================================================
+*.pem
+*.key
+*.p12
+*.pfx
+*firebase-adminsdk*.json
+*service-account*.json
+client_secret_*.json
+google-credentials*.json
+.env
+.env.local
+.env.production
+.env.staging
+.env.development
+.env.*.local
+!.env.example
+!.env.local.template
+
+# ============================================================
+# NODE / NEXT.JS (admin-dashboard, school-dashboard)
+# ============================================================
+node_modules/
+.next/
+.vercel/
+out/
+build/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+.npm
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.eslintcache
+*.tsbuildinfo
+next-env.d.ts
+
+# ============================================================
+# PYTHON / FASTAPI (educat_backend)
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+env/
+ENV/
+.env/
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+celerybeat-schedule
+celerybeat.pid
+instance/
+
+# ============================================================
+# FLUTTER / DART (educat_flutter)
+# ============================================================
+# Flutter build outputs
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+*.iml
+*.ipr
+*.iws
+.idea/
+*.class
+*.log
+*.lock
+GeneratedPluginRegistrant.*
+
+# Flutter web
+web/flutter_service_worker.js
+
+# Android
+**/android/gradle-wrapper.jar
+**/android/.gradle
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+**/android/**/GeneratedPluginRegistrant.kt
+**/android/key.properties
+**/*.keystore
+**/*.jks
+
+# iOS
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbxuser
+**/ios/**/*.perspectivev3
+**/ios/**/*.xccheckout
+**/ios/**/*.xcscmblueprint
+**/ios/Flutter/.last_build_id
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Runner/GeneratedPluginRegistrant.*
+**/ios/Runner/Info.plist
+
+# ============================================================
+# DOCKER
+# ============================================================
+.dockerignore
+
+# ============================================================
+# "New folder" — SENSITIVE FILES (credentials, videos, zips)
+# ============================================================
+New folder/
+"New folder"/
+New\ folder/
+
+# ============================================================
+# EDITORS & IDEs
+# ============================================================
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/*.code-workspace
+!.vscode/tasks.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================================
+# MISC
+# ============================================================
+*.zip
+*.tar.gz
+*.rar
+*.mp4
+*.mp3
+*.mov
+*.avi
+*.mkv
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+*.log
+*.tmp
+*.temp
+redis_ca.zip
+openapi.json
+
+# ============================================================
+# OS FILES
+# ============================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

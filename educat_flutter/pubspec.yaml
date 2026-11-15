@@ -1,0 +1,59 @@
+name: educat_ai
+description: EduCat AI — Class 1-10 Smart Tutor with Billi
+publish_to: 'none'
+version: 3.1.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^2.5.1
+
+  # Navigation
+  go_router: ^14.2.0
+
+  # Networking
+  dio: ^5.7.0
+
+  # Auth
+  firebase_core: ^3.6.0
+  firebase_auth: ^5.3.1
+
+  # Secure storage
+  flutter_secure_storage: ^9.2.2
+
+  # UI & Animations
+  google_fonts: ^6.2.1
+  flutter_animate: ^4.5.0
+  lottie: ^3.1.2
+  cached_network_image: ^3.4.1
+  shimmer: ^3.0.0
+  fl_chart: ^0.69.0
+  percent_indicator: ^4.2.3
+
+  # Audio
+  audioplayers: ^6.1.0
+  permission_handler: ^11.3.1
+
+  # Utils
+  intl: 0.20.2
+  crypto: ^3.0.5
+  connectivity_plus: ^6.1.0
+  url_launcher: ^6.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/lottie/
